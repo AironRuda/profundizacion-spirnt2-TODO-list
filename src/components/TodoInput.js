@@ -1,13 +1,13 @@
 import React from "react";
+import { Form, InputGroup } from "react-bootstrap";
 
 const TodoInput = () => {
   return (
-    <div className="mt-6 relative">
-      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pinter-events-none">
-        <span className="border border-primary border-solid p-1 rounded-circle"></span>
-      </div>
-      <input type="text" className="focus: shadow-lg p-12" />
-      <p className=""></p>
+    <div>
+      <InputGroup className="mb-3">
+        <InputGroup.Checkbox disabled />
+        <Form.Control />
+      </InputGroup>
     </div>
   );
 };

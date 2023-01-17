@@ -1,11 +1,15 @@
-import { CloseButton, InputGroup } from "react-bootstrap";
-
-const Todo = ({ todo, handleDelete }) => {
+const Todo = ({ todo, handleSetComplete, handleDelete }) => {
   const { id, title, completed } = todo;
 
   return (
     <div className="d-flex align-items-center justify-content-between border-bottom solid">
-      <input type="checkbox" />
+      <input
+        type="checkbox"
+        onClick={() => {
+          handleSetComplete(id);
+        }}
+      />
+      {/* <input type="checkbox" /> */}
       {!completed ? (
         <p>{title}</p>
       ) : (
@@ -16,7 +20,7 @@ const Todo = ({ todo, handleDelete }) => {
 
       <button
         type="button"
-        class="btn-close"
+        className="btn-close"
         aria-label="Close"
         onClick={() => handleDelete(id)}
       ></button>

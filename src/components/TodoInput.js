@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, InputGroup } from "react-bootstrap";
+import { InputGroup } from "react-bootstrap";
 
 const TodoInput = ({ addTodo }) => {
   const [title, setTitle] = useState("");
